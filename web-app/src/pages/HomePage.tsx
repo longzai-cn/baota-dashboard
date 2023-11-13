@@ -14,10 +14,32 @@ const HomePage: React.FC = () => {
         的宝塔面板，纯静态项目，支持多节点，数据存储在本地浏览器，不依赖于第三方服务。
       </Typography.Paragraph>
       <Space size="small">
-        <Button type="text" size="small" icon={<HomeOutlined />}>在线演示</Button>
-        <Button type="text" size="small" icon={<GithubOutlined />} onClick={()=>{
-          window.open('https://github.com/longzai-cn/baota-dashboard', '_blank');
-        }}>代码仓库</Button>
+        <Button
+          type="text"
+          size="small"
+          icon={<HomeOutlined />}
+          onClick={() => {
+            window.open(
+              "https://longzai-cn.github.io/baota-dashboard/",
+              "_blank"
+            );
+          }}
+        >
+          在线演示
+        </Button>
+        <Button
+          type="text"
+          size="small"
+          icon={<GithubOutlined />}
+          onClick={() => {
+            window.open(
+              "https://github.com/longzai-cn/baota-dashboard",
+              "_blank"
+            );
+          }}
+        >
+          代码仓库
+        </Button>
       </Space>
       <Divider />
       <ServerCardList />
