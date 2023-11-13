@@ -5,6 +5,7 @@ import mockDevServerPlugin from 'vite-plugin-mock-dev-server'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: process.env.NODE_ENV === 'GITHUB_PAGES' ? '/baota-dashboard/' : '',
   plugins: [react(), mockDevServerPlugin()],
   server: {
     proxy: {
