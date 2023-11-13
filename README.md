@@ -52,7 +52,7 @@ Access to XMLHttpRequest has been blocked by CORS policy: No 'Access-Control-All
 
 ```
 
-如果你的BT面板添加 Access-Control-Allow-Headers 失败，也可以考虑采用 反向代理进行请求转发。
+如果你的BT面板添加 Access-Control-Allow-Headers 失败，也可以考虑采用 反向代理 进行请求转发。
 
 ### IP校验失败
 
