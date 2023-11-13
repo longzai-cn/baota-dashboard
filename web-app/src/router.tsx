@@ -6,28 +6,30 @@ import DomainsPage from "./pages/DomainsPage";
 import LogsPage from "./pages/LogsPage";
 import PageLayout from "./common/PageLayout";
 
+const prefix =  process.env.NODE_ENV === 'GITHUB_PAGES' ? '/baota-dashboard' : ''
+
 const router = createBrowserRouter([
   {
     element: <PageLayout />,
     children: [
       {
-        path: "/",
+        path: prefix + "/",
         element: <HomePage />,
       },
       {
-        path: "/servers",
+        path: prefix + "/servers",
         element: <ServersPage />,
       },
       {
-        path: "/websites",
+        path: prefix + "/websites",
         element: <WebsitesPage />,
       },
       {
-        path: "/domains",
+        path: prefix + "/domains",
         element: <DomainsPage />,
       },
       {
-        path: "/logs",
+        path: prefix + "/logs",
         element: <LogsPage />,
       },
     ],
