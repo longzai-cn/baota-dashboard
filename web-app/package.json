@@ -3,9 +3,13 @@
   "homepage": "https://longzai-cn.github.io/bt-dashboard",
   "version": "1.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/longzai-cn/bt-dashboard.git"
+  },
   "scripts": {
     "predeploy": "pnpm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
