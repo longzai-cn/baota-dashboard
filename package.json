@@ -1,0 +1,21 @@
+{
+  "name": "@longzai-cn/bt-dashboard-root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/longzai-cn/bt-dashboard.git"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "build": "pnpm  --parallel --filter \"./**\" build",
+    "api": "pnpm --filter @longzai-cn/baota-api-client"
+  },
+  "keywords": [
+    "bt-panel",
+    "react"
+  ],
+  "author": "Yuchen Wang <andy.wang@longzai.net.cn>",
+  "license": "MIT"
+}
