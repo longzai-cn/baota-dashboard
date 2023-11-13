@@ -5,37 +5,36 @@ import WebsitesPage from "./pages/WebsitesPage";
 import DomainsPage from "./pages/DomainsPage";
 import LogsPage from "./pages/LogsPage";
 import PageLayout from "./common/PageLayout";
-
-const prefix = '' // process.env.NODE_ENV === 'GITHUB_PAGES' ? '/baota-dashboard' : ''
+import config from "./config";
 
 const routes = [
   {
     element: <PageLayout />,
     children: [
       {
-        path: prefix + "/",
+        path: "/",
         element: <HomePage />,
       },
       {
-        path: prefix + "/servers",
+        path: "/servers",
         element: <ServersPage />,
       },
       {
-        path: prefix + "/websites",
+        path: "/websites",
         element: <WebsitesPage />,
       },
       {
-        path: prefix + "/domains",
+        path: "/domains",
         element: <DomainsPage />,
       },
       {
-        path: prefix + "/logs",
+        path: "/logs",
         element: <LogsPage />,
       },
     ],
   },
 ]
 
-const router = process.env.NODE_ENV === 'GITHUB_PAGES' ? createHashRouter(routes): createBrowserRouter(routes);
+const router = config.githubPages ? createHashRouter(routes): createBrowserRouter(routes);
 
 export default router;

@@ -8,7 +8,7 @@
     "url": "git+https://github.com/longzai-cn/baota-dashboard.git"
   },
   "scripts": {
-    "predeploy": "NODE_ENV=GITHUB_PAGES && pnpm run build",
+    "predeploy": "tsc && vite build --mode gh-pages",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",

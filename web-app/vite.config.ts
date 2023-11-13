@@ -4,17 +4,12 @@ import path from "path";
 import mockDevServerPlugin from "vite-plugin-mock-dev-server";
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  base: process.env.NODE_ENV === "GITHUB_PAGES" ? "/baota-dashboard/" : "",
+export default defineConfig(({ mode }) => ({
+  base: mode === "gh-pages" ? "/baota-dashboard/" : "/",
   plugins: [react(), mockDevServerPlugin()],
   server: {
     proxy: {
       "^/api": { target: "http://example.com" },
-    },
-  },
-  define: {
-    "process.env": {
-      NODE_ENV: JSON.stringify(process.env.NODE_ENV || "development"),
     },
   },
   resolve: {
@@ -39,4 +34,4 @@ export default defineConfig({
       },
     },
   },
-});
+}));
