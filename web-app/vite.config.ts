@@ -20,4 +20,17 @@ export default defineConfig({
       ),
     },
   },
+  build:{
+    rollupOptions: {
+      output: {
+        // manualChunks 配置
+        manualChunks: {
+          // 将 React 相关库打包成单独的 chunk 中
+          'react-vendor': ['react', 'react-dom'],
+          // 将组件库的代码打包
+          'library': ['antd'],
+        },
+      },
+    }
+  }
 });
