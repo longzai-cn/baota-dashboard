@@ -15,7 +15,9 @@ const HomePage: React.FC = () => {
       </Typography.Paragraph>
       <Space size="small">
         <Button type="text" size="small" icon={<HomeOutlined />}>在线演示</Button>
-        <Button type="text" size="small" icon={<GithubOutlined />}>代码仓库</Button>
+        <Button type="text" size="small" icon={<GithubOutlined />} onClick={()=>{
+          window.open('https://github.com/longzai-cn/baota-dashboard', '_blank');
+        }}>代码仓库</Button>
       </Space>
       <Divider />
       <ServerCardList />
