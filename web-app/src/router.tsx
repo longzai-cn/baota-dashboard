@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, createHashRouter } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ServersPage from "./pages/ServersPage";
 import WebsitesPage from "./pages/WebsitesPage";
@@ -6,9 +6,9 @@ import DomainsPage from "./pages/DomainsPage";
 import LogsPage from "./pages/LogsPage";
 import PageLayout from "./common/PageLayout";
 
-const prefix =  process.env.NODE_ENV === 'GITHUB_PAGES' ? '/baota-dashboard' : ''
+const prefix = '' // process.env.NODE_ENV === 'GITHUB_PAGES' ? '/baota-dashboard' : ''
 
-const router = createBrowserRouter([
+const routes = [
   {
     element: <PageLayout />,
     children: [
@@ -34,6 +34,8 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+]
+
+const router = process.env.NODE_ENV === 'GITHUB_PAGES' ? createHashRouter(routes): createBrowserRouter(routes);
 
 export default router;
