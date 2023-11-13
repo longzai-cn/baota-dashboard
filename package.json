@@ -1,11 +1,11 @@
 {
-  "name": "@longzai-cn/bt-dashboard-root",
+  "name": "@longzai-cn/baota-dashboard-root",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/longzai-cn/bt-dashboard.git"
+    "url": "git+https://github.com/longzai-cn/baota-dashboard.git"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",

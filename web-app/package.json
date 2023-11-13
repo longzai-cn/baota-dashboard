@@ -1,14 +1,14 @@
 {
-  "name": "@longzai-cn/bt-dashboard",
-  "homepage": "https://longzai-cn.github.io/bt-dashboard",
+  "name": "@longzai-cn/baota-dashboard",
+  "homepage": "https://longzai-cn.github.io/baota-dashboard/",
   "version": "1.0.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/longzai-cn/bt-dashboard.git"
+    "url": "git+https://github.com/longzai-cn/baota-dashboard.git"
   },
   "scripts": {
-    "predeploy": "pnpm run build",
+    "predeploy": "NODE_ENV=GITHUB_PAGES && pnpm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
