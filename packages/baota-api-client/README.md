@@ -1,5 +1,7 @@
 # Baota Api Client
 
+基于 Typescript + Axios 的宝塔API，支持从浏览器请求（需要开启跨域支持）。
+
 ## References
 
 - [baota](https://www.npmjs.com/package/baota)
