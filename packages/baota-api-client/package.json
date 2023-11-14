@@ -8,6 +8,11 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts"
   },
+  "homepage": "https://longzai-cn.github.io/baota-dashboard/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/longzai-cn/baota-dashboard.git"
+  },
   "scripts": {
     "test": "jest",
     "build": "pnpm run clean && pnpm run build-only && pnpm run post-build",
